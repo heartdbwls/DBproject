@@ -1,0 +1,38 @@
+<HTML><center>
+<HEAD><TITLE>상품 정보</TITLE></HEAD>
+<BODY>
+<?php 
+$mysqli = new mysqli("localhost", "yjshim", "2021103990", "yjshim"); 
+
+if (mysqli_connect_errno()) { 
+	printf("Connect failed: %s\n", mysqli_connect_error()); 
+	exit(); 
+} else { 
+	$sql = "SELECT * FROM P_CUSTOMER;"; 
+	$res = mysqli_query($mysqli, $sql); 
+ 	if ($res) { 
+ 		echo "<Table border=1>\n";
+ 		echo "<TH>productID</TH> <TH>type</TH>  <TH>porductName</TH>  <TH>price</TH> <TR>\n";
+ 		while ($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)){
+ 			$productID = $newArray['productID']; 
+ 			$type = $newArray['type']; 
+			$productName = $newArray['productName']; 
+			$price = $newArray['price']; 
+			echo "<TD>".$productID."</TD>";
+ 			echo "<TD>".$type."</TD>";
+ 			echo "<TD>".$productName."</TD>";
+ 			echo "<TD>".$price."</TD>";
+ 			echo "<TR>\n"; 
+ 		}
+ 		echo "</Table>\n"; 		
+		echo "<html>
+		<br>
+		<a href=index.html>go to main</a>
+	</html>";
+ 	} else { 
+ 		printf("Could not retrieve records: %s\n", mysqli_error($mysqli)); 
+ 	} 
+ 	mysqli_free_result($res); 
+ 	mysqli_close($mysqli); 
+} 
+?> 
