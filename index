@@ -1,0 +1,29 @@
+<HTML>
+        <HEAD><meta charset="utf-8">
+               <TITLE>main</TITLE>
+        </HEAD>
+        <BODY style="background-color:#d4f4fa">
+        <CENTER>
+        
+    <br><Br>
+    <table border=0>
+    <td bgcolor='#d4f4fa'>
+    <br>
+    <center><FONT SIZE = 5 ><b>(관계자전용) 철수네 옷가게</b></FONT></H1> 
+        <p>
+  <center><A HREF="select.php">주문 정보</A><b> | </b>
+ 	 <A HREF="insert.html">상품 추가</A><b> | </b>
+      <A HREF="delete_product.php">상품 삭제</A><b> | </b>
+      <A HREF="update.php">상품 가격 수정</A>
+      <p>
+      <br>
+    <center><FONT SIZE = 5 ><b>(고객전용) 철수네 옷가게 주문하러가기</b></FONT></H1> 
+        <p>
+  <center><A HREF="select_product.php">상품 정보</A><b> | </b>
+  		<A HREF="order.html">주문</A><b></b>
+  		<p>
+      <BR>
+  </td>
+        </BODY>
+ </HTML>
+ 
