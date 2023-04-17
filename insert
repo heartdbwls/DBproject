@@ -1,0 +1,16 @@
+<HTML><center>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><TITLE>상품 추가</TITLE>
+</head>
+<body>
+	<center>
+	<br>판매하고 싶은 의류 품목을 입력하세요.<br><br><br>
+	<form action="insert.php" method="POST">
+ 		<p>type: <input type="text" name="type" size="30">
+ 		<p>productName: <input type="text" name="productName" number="30">
+ 		<p>price: <input type="text" name="price" number="30">
+ 		<p><input type="submit" name="submit" value="등록"></p>
+ 	</form>
+		<a href=index.html>go to main</a>
+</body>
+</html>
